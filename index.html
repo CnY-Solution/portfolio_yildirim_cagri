@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <script>(function(s){try{var p=location.hash.replace(/^#!?\/?/,'').replace(/\/+$/,'').toLowerCase();if(s.indexOf(p)>-1)document.documentElement.classList.add('is-deeplink')}catch(e){}})(["profil","parcours","competences","realisations","veille","contact"]);</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/portfolio-racines-site/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/portfolio_yildirim_cagri/favicon.svg" />
     <meta
       name="description"
       content="Portfolio de Cagri Yildirim — BTS SIO option SISR. Parcours, compétences, réalisations et veille technologique."
     />
     <meta name="theme-color" content="#0d0b07" />
     <title>Portfolio — Cagri Yildirim</title>
-    <script type="module" crossorigin src="/portfolio-racines-site/assets/index-CKZKtY8S.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio-racines-site/assets/index-C0xrELjN.css">
+    <script type="module" crossorigin src="/portfolio_yildirim_cagri/assets/index-BvgddbNl.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio_yildirim_cagri/assets/index-By4aXZQY.css">
   </head>
   <body>
     <!-- Splash plein-écran — visible dès la 1re peinture, bouton « Entrer » compris
@@ -44,28 +44,28 @@
     </div>
     <!-- ⟡ les racines gardent leurs secrets ⟡ -->
     <!-- ⟡ LE GRAND CHANT ⟡
-         [ racine-haut:1 ]  [ profil:2 ]        [ parcours:3 ]
-         [ competences:4 ]  [ realisations:5 ]  [ veille:6 ]
-         [ contact:7 ]      [ racine-bas:8 ]    [ porte-montagne:— ]
+         (Grille maître 3×3 — page 49 TUNIC-style spatial map d'assemblage)
+         [ profil:1 ]      [ parcours:2 ]    [ competences:3 ]
+         [ realisations:4 ] [ veille:5 ]      [ contact:6 ]
+         [ —:racine-haut ]  [ —:racine-bas ]  [ —:porte-montagne ]
          « neuf cases, huit sèves, une porte »
     ⟡ -->
     <!-- Fond fluide interactif (Navier-Stokes, lazy) — sous le canvas 3D. -->
     <div id="fluid-bg" aria-hidden="true"></div>
     <!-- Canvas décoratif WebGL (moteur 3D lazy) — derrière le DOM, hors SEO. -->
-    <div id="scene" aria-hidden="true"></div>
+    <div id="scene" aria-hidden="true">
+      <picture class="scene-preview">
+        <source media="(max-aspect-ratio: 1/1)" srcset="/portfolio_yildirim_cagri/models/root-poster-mobile.jpg" />
+        <img src="/portfolio_yildirim_cagri/models/root-poster-desktop.jpg" alt="" fetchpriority="high" decoding="async" />
+      </picture>
+    </div>
     <!-- Vignette décorative — assombrit les bords de la scène (air mystérieux). -->
     <div id="vignette" aria-hidden="true"></div>
     <!-- Flou de bord — backdrop-filter blur masqué sur les bords et le bas. -->
     <div id="blur-edges" aria-hidden="true"></div>
     <!-- #app : page haute (var(--scroll-travel)) qui pilote la descente caméra
          au scroll. Le hero reste collé (sticky) au 1er écran ; le contenu DOM
-         réel demeure indexable (double couche D002) même sans WebGL.
-         Pied de page (styles/footer.css) : ancré en bas de #app, il n'allonge pas la page. -->
-    <div id="app">
-      <footer class="site-footer">
-        <p class="site-footer__credit">© 2026 Cagri Yildirim · Portfolio BTS SIO SISR</p>
-        <span class="site-footer__seal" data-seal aria-hidden="true"></span>
-      </footer>
-    </div>
+         réel demeure indexable (double couche D002) même sans WebGL. -->
+    <div id="app"></div>
   </body>
 </html>
