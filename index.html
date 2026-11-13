@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <script>(function(s){try{var p=location.hash.replace(/^#!?\/?/,'').replace(/\/+$/,'').toLowerCase();if(s.indexOf(p)>-1)document.documentElement.classList.add('is-deeplink')}catch(e){}})(["profil","parcours","competences","realisations","veille","contact"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/portfolio-racines-site/favicon.svg" />
+    <meta
+      name="description"
+      content="Portfolio de Cagri Yildirim — BTS SIO option SISR. Parcours, compétences, réalisations et veille technologique."
+    />
+    <meta name="theme-color" content="#0d0b07" />
+    <title>Portfolio — Cagri Yildirim</title>
+    <script type="module" crossorigin src="/portfolio-racines-site/assets/index-CKZKtY8S.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio-racines-site/assets/index-C0xrELjN.css">
+  </head>
+  <body>
+    <!-- Splash plein-écran — visible dès la 1re peinture, bouton « Entrer » compris
+         (statique : visible ≤ 0,5 s sans attendre le JS, M1). Fermé par ui/splash.ts
+         (bouton, clic, Entrée/Espace/Échap). Lien profond : jamais peint
+         (html.is-deeplink, posé en <head> — vite.config.ts) puis retiré par le JS.
+         Le h1 persistant est porté par la navigation DOM (ui/section-nav.ts). -->
+    <div id="splash">
+      <!-- Logo TUNIC-inspired : arbre/racines, style rune angulaire doré. -->
+      <svg class="splash-logo" viewBox="0 0 56 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Axe vertical central -->
+        <line x1="28" y1="4"  x2="28" y2="68" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Branches (2 niveaux) -->
+        <line x1="28" y1="14" x2="8"  y2="4"  stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="28" y1="14" x2="48" y2="4"  stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="28" y1="24" x2="14" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="28" y1="24" x2="42" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Barre sol -->
+        <line x1="4"  y1="38" x2="52" y2="38" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Racines (2 niveaux) -->
+        <line x1="28" y1="50" x2="10" y2="62" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="28" y1="50" x2="46" y2="62" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="28" y1="58" x2="16" y2="68" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="28" y1="58" x2="40" y2="68" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <p class="splash-name">Cagri Yildirim</p>
+      <p class="splash-sub">Portfolio · BTS SIO SISR</p>
+      <button type="button" class="splash-enter">Entrer</button>
+    </div>
+    <!-- ⟡ les racines gardent leurs secrets ⟡ -->
+    <!-- ⟡ LE GRAND CHANT ⟡
+         [ racine-haut:1 ]  [ profil:2 ]        [ parcours:3 ]
+         [ competences:4 ]  [ realisations:5 ]  [ veille:6 ]
+         [ contact:7 ]      [ racine-bas:8 ]    [ porte-montagne:— ]
+         « neuf cases, huit sèves, une porte »
+    ⟡ -->
+    <!-- Fond fluide interactif (Navier-Stokes, lazy) — sous le canvas 3D. -->
+    <div id="fluid-bg" aria-hidden="true"></div>
+    <!-- Canvas décoratif WebGL (moteur 3D lazy) — derrière le DOM, hors SEO. -->
+    <div id="scene" aria-hidden="true"></div>
+    <!-- Vignette décorative — assombrit les bords de la scène (air mystérieux). -->
+    <div id="vignette" aria-hidden="true"></div>
+    <!-- Flou de bord — backdrop-filter blur masqué sur les bords et le bas. -->
+    <div id="blur-edges" aria-hidden="true"></div>
+    <!-- #app : page haute (var(--scroll-travel)) qui pilote la descente caméra
+         au scroll. Le hero reste collé (sticky) au 1er écran ; le contenu DOM
+         réel demeure indexable (double couche D002) même sans WebGL.
+         Pied de page (styles/footer.css) : ancré en bas de #app, il n'allonge pas la page. -->
+    <div id="app">
+      <footer class="site-footer">
+        <p class="site-footer__credit">© 2026 Cagri Yildirim · Portfolio BTS SIO SISR</p>
+        <span class="site-footer__seal" data-seal aria-hidden="true"></span>
+      </footer>
+    </div>
+  </body>
+</html>
