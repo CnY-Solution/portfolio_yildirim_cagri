@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "collectedAt": "2026-11-13T15:34:45Z",
+  "sources": [
+    {
+      "id": "cert-fr",
+      "name": "CERT-FR",
+      "url": "https://cert.cyber.gouv.fr/alerte/",
+      "lastSuccessAt": "2026-11-13T15:34:45Z",
+      "status": "ok"
+    },
+    {
+      "id": "cnil",
+      "name": "CNIL",
+      "url": "https://www.cnil.fr/fr/actualite",
+      "lastSuccessAt": "2026-11-13T15:34:45Z",
+      "status": "ok"
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare — blog technique",
+      "url": "https://blog.cloudflare.com/fr-fr/",
+      "lastSuccessAt": "2026-11-13T15:34:45Z",
+      "status": "ok"
+    }
+  ],
+  "articles": [
+    {
+      "id": "7e795b6888f43f77",
+      "title": "Actualité du CEPD : adéquation de la Corée du Sud, versions finales des BCR-ST, et action coordonnée sur le recrutement via IA",
+      "url": "https://www.cnil.fr/fr/actualite-du-cepd-adequation-de-la-coree-du-sud-versions-finales-des-bcr-st-et-action-coordonnee-sur",
+      "publishedAt": "2026-11-12T12:00:00Z",
+      "sourceId": "cnil",
+      "category": "IA et données",
+      "context": "Point de vigilance : comprendre les conséquences de ces évolutions sur les données personnelles et les usages numériques."
+    },
+    {
+      "id": "c5a97fe599d3c32b",
+      "title": "Cybersécurité des collectivités territoriales : la CNIL prononce dix sanctions",
+      "url": "https://www.cnil.fr/fr/sanctions-cybersecurite-collectivites-territoriales",
+      "publishedAt": "2026-11-09T12:00:00Z",
+      "sourceId": "cnil",
+      "category": "IA et données",
+      "context": "Point de vigilance : comprendre les conséquences de ces évolutions sur les données personnelles et les usages numériques."
+    },
+    {
+      "id": "2af442540bfa4a7c",
+      "title": "[MàJ] Vulnérabilité dans OpenSSH (05 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-015/",
+      "publishedAt": "2026-11-05T00:00:00Z",
+      "sourceId": "cert-fr",
+      "category": "Cybersécurité",
+      "context": "Point de vigilance : repérer les systèmes concernés et consulter les mesures de protection recommandées par le CERT-FR."
+    },
+    {
+      "id": "310b9632f0278e3e",
+      "title": "Rapport Cloudflare sur les menaces DDoS au troisième trimestre 2026 : plus d’essaims, moins de géantes",
+      "url": "https://blog.cloudflare.com/fr-fr/ddos-threat-report-2026-q3/",
+      "publishedAt": "2026-11-03T03:00:02Z",
+      "sourceId": "cloudflare",
+      "category": "Cloud et réseaux",
+      "context": "Point de vigilance : suivre l’évolution des infrastructures Internet et évaluer ce qu’elle change pour l’administration des systèmes et réseaux."
+    },
+    {
+      "id": "c0d000c0c222174e",
+      "title": "Les événements à l'origine d'une déconnexion d'Internet lors du troisième trimestre 2026",
+      "url": "https://blog.cloudflare.com/fr-fr/q3-2026-internet-disruption-summary/",
+      "publishedAt": "2026-10-28T03:48:37Z",
+      "sourceId": "cloudflare",
+      "category": "Cloud et réseaux",
+      "context": "Point de vigilance : suivre l’évolution des infrastructures Internet et évaluer ce qu’elle change pour l’administration des systèmes et réseaux."
+    },
+    {
+      "id": "0f4de67236acef69",
+      "title": "[Màj] Multiples vulnérabilités dans PHP (21 octobre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-014/",
+      "publishedAt": "2026-10-21T00:00:00Z",
+      "sourceId": "cert-fr",
+      "category": "Cybersécurité",
+      "context": "Point de vigilance : repérer les systèmes concernés et consulter les mesures de protection recommandées par le CERT-FR."
+    }
+  ]
+}

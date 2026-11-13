@@ -1,0 +1,32 @@
+[
+  {
+    "id": "cert-fr",
+    "name": "CERT-FR",
+    "url": "https://cert.cyber.gouv.fr/alerte/",
+    "feed": "https://cert.cyber.gouv.fr/alerte/feed/",
+    "hosts": ["cert.cyber.gouv.fr", "www.cert.cyber.gouv.fr", "cert.ssi.gouv.fr", "www.cert.ssi.gouv.fr"],
+    "category": "Cybersécurité",
+    "context": "Point de vigilance : repérer les systèmes concernés et consulter les mesures de protection recommandées par le CERT-FR.",
+    "keywords": []
+  },
+  {
+    "id": "cnil",
+    "name": "CNIL",
+    "url": "https://www.cnil.fr/fr/actualite",
+    "feed": "https://www.cnil.fr/fr/rss.xml",
+    "hosts": ["cnil.fr", "www.cnil.fr"],
+    "category": "IA et données",
+    "context": "Point de vigilance : comprendre les conséquences de ces évolutions sur les données personnelles et les usages numériques.",
+    "keywords": ["intelligence artificielle", " ia ", "algorith", "cyber", "sécurité", "securite", "rejeu", "agent", "cloud", "technolog", "données", "donnees", "numérique"]
+  },
+  {
+    "id": "cloudflare",
+    "name": "Cloudflare — blog technique",
+    "url": "https://blog.cloudflare.com/fr-fr/",
+    "feed": "https://blog.cloudflare.com/fr-fr/rss/",
+    "hosts": ["blog.cloudflare.com"],
+    "category": "Cloud et réseaux",
+    "context": "Point de vigilance : suivre l’évolution des infrastructures Internet et évaluer ce qu’elle change pour l’administration des systèmes et réseaux.",
+    "keywords": ["réseau", "internet", "cloud", "sécurité", "securite", "ddos", "dns", "waf", "intelligence artificielle", " ia ", "agent", "vulnérab", "connect", "tls", "http", "infrastructure"]
+  }
+]

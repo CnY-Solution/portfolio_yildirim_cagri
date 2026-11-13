@@ -1,0 +1,79 @@
+# Install in the PUBLIC build-only repository as .github/workflows/veille.yml.
+# Keep Pages configured to publish main / (root), as in Astral decision D097.
+name: Refresh technology watch
+
+on:
+  schedule:
+    - cron: '23 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/veille.json'
+      - 'tools/veille/**'
+      - '.github/workflows/veille.yml'
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: veille-publication
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.repository == 'CnY-Solution/portfolio_yildirim_cagri'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify collector
+        run: python -B -m unittest discover -s tools/veille
+      - name: Collect official feeds
+        run: python -B tools/veille/update.py --output data/veille.json
+      - name: Save dated snapshot
+        run: |
+          git add -- data/veille.json
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'chore(veille): refresh technology watch'
+            git push origin HEAD:main
+          fi
+      # GITHUB_TOKEN pushes do not trigger Pages automatically. Request the
+      # documented legacy build explicitly; no PAT or settings change is needed.
+      - name: Request GitHub Pages publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST \
+            -H 'Accept: application/vnd.github+json' \
+            -H 'X-GitHub-Api-Version: 2026-03-10' \
+            "repos/$GITHUB_REPOSITORY/pages/builds"
+      - name: Verify the published revision
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          expected=$(git rev-parse HEAD)
+          for attempt in $(seq 1 24); do
+            result=$(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest")
+            state=$(jq -r '.status' <<< "$result")
+            revision=$(jq -r '.commit' <<< "$result")
+            if [ "$revision" = "$expected" ] && [ "$state" = 'built' ]; then
+              echo "GitHub Pages published $expected"
+              exit 0
+            fi
+            if [ "$revision" = "$expected" ] && [ "$state" = 'errored' ]; then
+              jq -r '.error.message' <<< "$result"
+              exit 1
+            fi
+            sleep 10
+          done
+          echo 'The requested Pages revision was not confirmed within four minutes.' >&2
+          exit 1
