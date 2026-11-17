@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-11-16T16:09:23Z",
+  "collectedAt": "2026-11-17T16:17:41Z",
   "sources": [
     {
       "id": "cert-fr",
       "name": "CERT-FR",
       "url": "https://cert.cyber.gouv.fr/alerte/",
-      "lastSuccessAt": "2026-11-16T16:09:23Z",
+      "lastSuccessAt": "2026-11-17T16:17:41Z",
       "status": "ok"
     },
     {
       "id": "cnil",
       "name": "CNIL",
       "url": "https://www.cnil.fr/fr/actualite",
-      "lastSuccessAt": "2026-11-16T16:09:23Z",
+      "lastSuccessAt": "2026-11-17T16:17:41Z",
       "status": "ok"
     },
     {
       "id": "cloudflare",
       "name": "Cloudflare — blog technique",
       "url": "https://blog.cloudflare.com/fr-fr/",
-      "lastSuccessAt": "2026-11-16T16:09:23Z",
+      "lastSuccessAt": "2026-11-17T16:17:41Z",
       "status": "ok"
     }
   ],
