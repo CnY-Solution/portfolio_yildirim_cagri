@@ -1,30 +1,39 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-11-17T16:17:41Z",
+  "collectedAt": "2026-11-18T15:51:48Z",
   "sources": [
     {
       "id": "cert-fr",
       "name": "CERT-FR",
       "url": "https://cert.cyber.gouv.fr/alerte/",
-      "lastSuccessAt": "2026-11-17T16:17:41Z",
+      "lastSuccessAt": "2026-11-18T15:51:48Z",
       "status": "ok"
     },
     {
       "id": "cnil",
       "name": "CNIL",
       "url": "https://www.cnil.fr/fr/actualite",
-      "lastSuccessAt": "2026-11-17T16:17:41Z",
+      "lastSuccessAt": "2026-11-18T15:51:48Z",
       "status": "ok"
     },
     {
       "id": "cloudflare",
       "name": "Cloudflare — blog technique",
       "url": "https://blog.cloudflare.com/fr-fr/",
-      "lastSuccessAt": "2026-11-17T16:17:41Z",
+      "lastSuccessAt": "2026-11-18T15:51:48Z",
       "status": "ok"
     }
   ],
   "articles": [
+    {
+      "id": "8a626a9260468ecd",
+      "title": "Vulnérabilité dans Oracle Java SE (18 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-016/",
+      "publishedAt": "2026-11-18T00:00:00Z",
+      "sourceId": "cert-fr",
+      "category": "Cybersécurité",
+      "context": "Point de vigilance : repérer les systèmes concernés et consulter les mesures de protection recommandées par le CERT-FR."
+    },
     {
       "id": "7e795b6888f43f77",
       "title": "Actualité du CEPD : adéquation de la Corée du Sud, versions finales des BCR-ST, et action coordonnée sur le recrutement via IA",
@@ -69,15 +78,6 @@
       "sourceId": "cloudflare",
       "category": "Cloud et réseaux",
       "context": "Point de vigilance : suivre l’évolution des infrastructures Internet et évaluer ce qu’elle change pour l’administration des systèmes et réseaux."
-    },
-    {
-      "id": "0f4de67236acef69",
-      "title": "[Màj] Multiples vulnérabilités dans PHP (21 octobre 2026)",
-      "url": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-014/",
-      "publishedAt": "2026-10-21T00:00:00Z",
-      "sourceId": "cert-fr",
-      "category": "Cybersécurité",
-      "context": "Point de vigilance : repérer les systèmes concernés et consulter les mesures de protection recommandées par le CERT-FR."
     }
   ]
 }
